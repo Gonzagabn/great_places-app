@@ -14,17 +14,25 @@ class _PlaceFormScreenState extends State<PlaceFormScreen> {
         title: Text('Novo Lugar'),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Column(
-            children: <Widget>[
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Título',
+          Expanded(
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  children: <Widget>[
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Título',
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    ImageInput(),
+                  ],
                 ),
               ),
-              SizedBox(height: 10),
-              ImageInput(),
-            ],
+            ),
           ),
           ElevatedButton.icon(
             icon: Icon(Icons.add, color: Colors.black),
