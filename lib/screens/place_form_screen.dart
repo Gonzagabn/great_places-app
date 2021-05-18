@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:great_places/widgets/image_input.dart';
 
 class PlaceFormScreen extends StatefulWidget {
   @override
@@ -12,8 +13,28 @@ class _PlaceFormScreenState extends State<PlaceFormScreen> {
       appBar: AppBar(
         title: Text('Novo Lugar'),
       ),
-      body: Center(
-        child: Text('Form!!!'),
+      body: Column(
+        children: <Widget>[
+          Column(
+            children: <Widget>[
+              TextField(
+                decoration: InputDecoration(
+                  labelText: 'Título',
+                ),
+              ),
+              SizedBox(height: 10),
+              ImageInput(),
+            ],
+          ),
+          ElevatedButton.icon(
+            icon: Icon(Icons.add, color: Colors.black),
+            label: Text('Adicionar', style: TextStyle(color: Colors.black)),
+            style: ButtonStyle(
+                backgroundColor: MaterialStateColor.resolveWith(
+                    (states) => Theme.of(context).accentColor)),
+            onPressed: () {},
+          ),
+        ],
       ),
     );
   }
