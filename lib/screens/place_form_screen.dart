@@ -7,6 +7,10 @@ class PlaceFormScreen extends StatefulWidget {
 }
 
 class _PlaceFormScreenState extends State<PlaceFormScreen> {
+  final _titleController = TextEditingController();
+
+  void _submitForm() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,6 +27,7 @@ class _PlaceFormScreenState extends State<PlaceFormScreen> {
                 child: Column(
                   children: <Widget>[
                     TextField(
+                      controller: _titleController,
                       decoration: InputDecoration(
                         labelText: 'Título',
                       ),
@@ -38,9 +43,12 @@ class _PlaceFormScreenState extends State<PlaceFormScreen> {
             icon: Icon(Icons.add, color: Colors.black),
             label: Text('Adicionar', style: TextStyle(color: Colors.black)),
             style: ButtonStyle(
-                backgroundColor: MaterialStateColor.resolveWith(
-                    (states) => Theme.of(context).accentColor)),
-            onPressed: () {},
+              backgroundColor: MaterialStateColor.resolveWith(
+                  (states) => Theme.of(context).accentColor),
+              elevation: MaterialStateProperty.resolveWith((states) => 0),
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            ),
+            onPressed: _submitForm,
           ),
         ],
       ),
