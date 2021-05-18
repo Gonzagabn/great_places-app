@@ -7,4 +7,8 @@ class GreatPlaces with ChangeNotifier {
   List<Place> get items {
     return [..._items];
   }
+
+  int get itemsCount {
+    return _items.length;
+  }
 }
