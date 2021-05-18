@@ -11,4 +11,8 @@ class GreatPlaces with ChangeNotifier {
   int get itemsCount {
     return _items.length;
   }
+
+  Place itemByIndex(int index) {
+    return _items[index];
+  }
 }
