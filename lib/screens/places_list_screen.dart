@@ -23,10 +23,17 @@ class PlacesListScreen extends StatelessWidget {
           child: Text('Nenhum local cadastrado!'),
         ),
         builder: (context, greatPlaces, child) => greatPlaces.itemsCount == 0
-            ? child
+            ? child!
             : ListView.builder(
                 itemCount: greatPlaces.itemsCount,
-                itemBuilder: (context, index) => Text('Item'),
+                itemBuilder: (context, index) => ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage:
+                        FileImage(greatPlaces.itemByIndex(index).image!),
+                  ),
+                  title: Text(greatPlaces.itemByIndex(index).title!),
+                  onTap: () {},
+                ),
               ),
       ),
     );
