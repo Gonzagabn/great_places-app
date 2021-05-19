@@ -25,10 +25,10 @@ class _ImageInputState extends State<ImageInput> {
     if (imageFile == null) return;
 
     setState(() {
-      _storedImage = File(imageFile!.path);
+      _storedImage = File(imageFile.path);
     });
 
-    widget.onSelectImage(...);
+    widget.onSelectImage();
   }
 
   @override
