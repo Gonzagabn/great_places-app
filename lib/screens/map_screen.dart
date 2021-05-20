@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:great_places/models/place.dart';
-import 'package:image_picker/image_picker.dart';
 
 class MapScreen extends StatefulWidget {
   final PlaceLocation initialLocation;
@@ -33,6 +32,17 @@ class _MapScreenState extends State<MapScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Selecione...'),
+        actions: <Widget>[
+          if (!widget.isReadOnly)
+            IconButton(
+              icon: Icon(Icons.check),
+              onPressed: _pickedPosition == null
+                  ? null
+                  : () {
+                      Navigator.of(context).pop(_pickedPosition);
+                    },
+            ),
+        ],
       ),
       body: GoogleMap(
         initialCameraPosition: CameraPosition(
