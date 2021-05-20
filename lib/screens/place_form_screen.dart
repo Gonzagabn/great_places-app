@@ -68,6 +68,9 @@ class _PlaceFormScreenState extends State<PlaceFormScreen> {
                       decoration: InputDecoration(
                         labelText: 'Título',
                       ),
+                      onChanged: (text) {
+                        setState(() {});
+                      },
                     ),
                     SizedBox(height: 10),
                     ImageInput(this._selectImage),
