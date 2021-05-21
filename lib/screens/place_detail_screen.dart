@@ -8,9 +8,7 @@ class PlaceDetailScreen extends StatelessWidget {
     Place place = ModalRoute.of(context)!.settings.arguments as Place;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          place.title!,
-        ),
+        title: Text(place.title!),
       ),
       body: Column(
         children: <Widget>[

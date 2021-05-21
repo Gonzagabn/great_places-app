@@ -27,7 +27,7 @@ class _LocationInputState extends State<LocationInput> {
     });
   }
 
-  Future<void> _getCurrentLocation() async {
+  Future<void> _getCurrentUserLocation() async {
     try {
       final locData = await Location().getLocation();
       _showPreview(locData.latitude!, locData.longitude!);
@@ -84,7 +84,7 @@ class _LocationInputState extends State<LocationInput> {
             TextButton.icon(
               icon: Icon(Icons.location_on),
               label: Text('Localização Atual'),
-              onPressed: _getCurrentLocation,
+              onPressed: _getCurrentUserLocation,
             ),
             TextButton.icon(
               icon: Icon(Icons.map),
