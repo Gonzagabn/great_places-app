@@ -15,4 +15,5 @@ Aplicativo que armazena uma lista de lugares, contendo informações definidas p
 - Configuração e utilização das APIs do Google Maps;
 - Permissões no Android: AndroidManifest.xml;
 - Permissões no IOS: Info.plist e AppDelegate.swift
+- Reverse geocoding para pegar informações a partir de uma posição no mapa;
 - Armazenamento de dados no SQLite.
