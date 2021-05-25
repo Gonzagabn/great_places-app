@@ -8,6 +8,8 @@ Aplicativo que armazena uma lista de lugares, contendo informações definidas p
 
 Projetado para fins de estudo pela Cod3r - https://www.udemy.com/course/curso-flutter/
 
+![img](https://i.imgur.com/h83Ygh5.jpg)
+
 ## Funções Implementadas e Aprendizados: 
 
 - Providers;
