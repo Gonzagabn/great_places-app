@@ -6,6 +6,8 @@
 
 Aplicativo que armazena uma lista de lugares, contendo informações definidas pelo usuário, tais como: o título, uma foto tirada a partir do dispositivo e a localização no mapa, utilizando o Google Maps.
 
+Projetado para fins de estudo pela Cod3r - https://www.udemy.com/course/curso-flutter/
+
 ## Funções Implementadas e Aprendizados: 
 
 - Providers;
